@@ -6,11 +6,11 @@ import express, {
   NextFunction,
   request,
 } from "express";
-import "reflect-metadata";
 import dotenv from "dotenv";
 import router from "./routes/index";
 import AppError from "./shared/error/AppError";
 import { AppDataSource } from "./database/data-source";
+import "reflect-metadata";
 
 AppDataSource.initialize().then(() => {
   dotenv.config();

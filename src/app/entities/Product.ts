@@ -2,18 +2,21 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
 @Entity("products")
 export class Product {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn("uuid")
   id: number;
 
-  @Column()
+  @Column("varchar")
   name: string;
 
   @Column("float")
-  price: string;
+  price: number;
+  
+  @Column("int")
+  quantity: number;
 
   @Column("float")
-  saleprice: number;
+  sale_price: number;
 
-  @Column()
-  date: number;
+  @Column("date")
+  due_date: Date;
 }
