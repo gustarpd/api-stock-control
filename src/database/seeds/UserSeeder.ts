@@ -14,7 +14,7 @@ export class ProductSeeder implements Seeder {
       price: 134.54,
       sale_price: 120.43,
       quantity: 12,
-      due_date: 'sfafa',
+      due_date: new Date(),
     };
 
     const newUser = userRepository.create(userData);

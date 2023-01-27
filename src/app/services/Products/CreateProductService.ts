@@ -27,7 +27,7 @@ class createProductService {
     });
 
     await ProductRepository.save(products);
- 
+
     return products;
   }
 }

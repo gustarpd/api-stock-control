@@ -1,9 +1,13 @@
 import { AppDataSource } from "../../../database/data-source";
-import { UserRepository } from "../../repositories/ProductsRepository";
+import { ProductRepository } from "../../repositories/ProductsRepository";
 
 class FilterProductService {
   public async execute(name: string) {
-    const product = UserRepository.findByName(name);
+    const product = ProductRepository.findByName(name);
+    
+    if(!product) {
+      throw new Error("Product not found");
+    }
 
     return product;
   }
