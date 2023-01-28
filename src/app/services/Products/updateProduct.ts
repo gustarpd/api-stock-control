@@ -14,7 +14,7 @@ class updatesProductService {
     sale_price,
     due_date,
   }: IProduct) {
-    const ProductRepositorI = AppDataSource.getRepository(Product);
+
     const products = ProductRepository.findByid({
       id,
       name,

@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
-import SoldPoductService from "../services/Products/soldProductService";
+import SoldPoductService from "../../services/Sales/soldProductService";
 
 export class SoldProductController {
   public async handle(request: Request, response: Response) {
     const { data } = request.body;
 
     const soldProduct = new SoldPoductService();
-    const ProductService = soldProduct.execute(data);
+    const ProductService = await soldProduct.execute(data);
 
     return response.json(ProductService);
   }

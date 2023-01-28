@@ -1,19 +1,16 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-@Entity("sale")
-export class Sale {
+@Entity("exit")
+export class Exit {
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  id: number;
 
   @Column("varchar")
-  name: string;
+  description: string;
 
   @Column("float")
   price: number;
-
-  @Column("int")
-  quantity: number;
-
+  
   @Column("date")
   date: Date;
 }

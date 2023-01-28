@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import createProductService from "../services/Products/CreateProductService";
+import createProductService from "../../services/Products/CreateProductService";
 
 export class ProductRegistrationController {
   async handle(request: Request, response: Response) {
@@ -12,7 +12,7 @@ export class ProductRegistrationController {
       price,
       sale_price,
       quantity,
-      due_date: new Date()
+      due_date: "2023-01-02T17:00:19.628Z"
     });
 
     return response.json(product)

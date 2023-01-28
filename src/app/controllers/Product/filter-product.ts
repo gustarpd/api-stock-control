@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import FilterProductService from "../services/Products/FilterproductService";
-import updatesProductService from "../services/Products/updateProduct";
+import FilterProductService from "../../services/Products/FilterproductService";
+import updatesProductService from "../../services/Products/updateProduct";
 
 export class FilterProduct {
   public async handle(request: Request, response: Response) {

@@ -6,7 +6,7 @@ interface IRequestData {
   quantity: number;
   price: number;
   sale_price: number;
-  due_date: Date;
+  due_date: any;
 }
 
 class createProductService {
