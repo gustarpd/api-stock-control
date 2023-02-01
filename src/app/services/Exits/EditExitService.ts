@@ -1,8 +1,10 @@
-import { ExitsRepository, IDataExits } from "../../repositories/ExitsExpansesRepository";
+import {
+  ExitsRepository,
+  IDataExits,
+} from "../../repositories/ExitsExpansesRepository";
 
 class EditProductExitService {
-  public async execute({ description, price, date }: IDataExits){
-
+  public async execute({ description, price, date }: IDataExits) {
     const product = ExitsRepository.findByid({ description, price, date });
     return product;
   }

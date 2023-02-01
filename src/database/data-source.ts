@@ -11,6 +11,7 @@ const options: DataSourceOptions & SeederOptions = {
   username: process.env.DB_USER,
   password: "1234" as string,
   database: process.env.DB_NAME,
+  synchronize: true,
   entities: [`${__dirname}/../../src/app/entities/*.ts`],
   migrations: [`${__dirname}/../../src/database/migrations/*.{ts,js}`],
   seeds: [MainSeeder]

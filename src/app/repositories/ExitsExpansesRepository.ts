@@ -21,6 +21,13 @@ export const ExitsRepository = AppDataSource.getRepository(Exit).extend({
       .execute();
   },
 
+  deleteById(id: string) {
+    return this.createQueryBuilder("exit")
+      .delete()
+      .where("id = :id", { id })
+      .execute();
+  },
+
   findByDate(start_date: string, end_date: string) {
     return this.createQueryBuilder("exit")
       .where("exit.date > :start_date", { start_date })

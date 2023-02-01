@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import ExitProductService from "../../services/Exits/ExitService";
-import createProductService from "../../services/Products/CreateProductService";
 
 export class ExitExpanseController {
   async handle(request: Request, response: Response) {

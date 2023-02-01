@@ -28,5 +28,6 @@ router.post("/create-new-exit", new ExitExpanseController().handle)
 
 router.get("/get-exits-expanses", new GetAllExitExpanseController().handle)
 router.put("/update-exits-expanses/:id", new GetAllExitExpanseController().handle)
+router.delete("/delete/products/:id", new DeleteProductController().handle)
 
 export default router;
