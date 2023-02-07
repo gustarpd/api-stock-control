@@ -1,25 +1,27 @@
+import { getRepository } from "typeorm";
 import { AppDataSource } from "../../database/data-source";
 import { Product } from "../entities/Product";
 
 export interface IProduct {
-  id: number;
+  id: string;
   name: string;
   price: number;
   sale_price: number;
   due_date: string;
+  quantity: number;
 }
 
 export const ProductRepository = AppDataSource.getRepository(Product).extend({
   findByName(name: string) {
-    return this.createQueryBuilder("product")
-      .where("product.name like :name", { name: `%${name}%` })
-      .getMany();
+   return this.createQueryBuilder("product")
+    .where("product.name like :name", { name: `%${name}%` })
+    .getMany();
   },
   findByid({ id, name, price, sale_price, due_date }: IProduct) {
-    return this.createQueryBuilder("product")
-      .update()
-      .where("id = :id", { id: id })
-      .set({
+    this.createQueryBuilder("product")
+    .update()
+    .where("id = :id", { id: id })
+    .set({
         name,
         price,
         sale_price,
@@ -28,7 +30,7 @@ export const ProductRepository = AppDataSource.getRepository(Product).extend({
     .execute();
   },
 
-  findOne(id: number) {
+  findOne(id: string) {
     this.createQueryBuilder("product")
       .delete()
       .from(Product)

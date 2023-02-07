@@ -13,6 +13,7 @@ class updatesProductService {
     price,
     sale_price,
     due_date,
+    quantity
   }: IProduct) {
 
     const products = ProductRepository.findByid({
@@ -21,6 +22,7 @@ class updatesProductService {
       price,
       sale_price,
       due_date,
+      quantity
     })
     
     return { message: "Produto atualizado com sucesso!" };

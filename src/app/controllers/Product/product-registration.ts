@@ -12,7 +12,7 @@ export class ProductRegistrationController {
       price,
       sale_price,
       quantity,
-      due_date: "2023-01-02T17:00:19.628Z"
+      due_date
     });
 
     return response.json(product)

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { DeleteProductController } from "../app/controllers/Product/delete-product";
 import { ExitExpanseController } from "../app/controllers/Expanse/ExitProductsController";
-import { FilterProduct } from "../app/controllers/Product/filter-product";
+import { updateProductController } from "../app/controllers/Product/filter-product";
 import { GetAllExitExpanseController } from "../app/controllers/Expanse/GetAllExitExpanseController";
 import { GetAllSalesControllers } from "../app/controllers/Expanse/GetAllSalesController";
 import { ProductRegistrationController } from "../app/controllers/Product/product-registration";
@@ -18,8 +18,10 @@ router.post(
   new ProductRegistrationController().handle
 );
 
-router.get("/get-products", new FilterProduct().handle);
-router.put("/edit/product/:id", new FilterProduct().edit);
+router.get("/get-products", new updateProductController().handle);
+router.get("/get-products/:name", new updateProductController().getByName);
+
+router.put("/edit/product/:id", new updateProductController().edit);
 router.delete("/delele/product/:id", new DeleteProductController().handle);
 
 router.post("/add-sold-in", new SoldProductController().handle);

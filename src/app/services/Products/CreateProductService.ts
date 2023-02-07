@@ -18,6 +18,13 @@ class createProductService {
     sale_price,
   }: IRequestData): Promise<Product> {
     const ProductRepository = AppDataSource.getRepository(Product);
+
+    const getProductsExists = await ProductRepository.findOne({
+      where: {
+        name
+      }
+    })
+
     const products = ProductRepository.create({
       name,
       price,
@@ -25,6 +32,7 @@ class createProductService {
       quantity,
       due_date,
     });
+
 
     await ProductRepository.save(products);
 

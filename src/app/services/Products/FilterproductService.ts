@@ -2,7 +2,7 @@ import { AppDataSource } from "../../../database/data-source";
 import { ProductRepository } from "../../repositories/ProductsRepository";
 
 class FilterProductService {
-  public async execute(name: string) {
+  public async execute(name: any) {
     const product = ProductRepository.findByName(name);
     
     if(!product) {
