@@ -5,7 +5,7 @@ import express, {
   NextFunction,
 } from "express";
 import dotenv from "dotenv";
-import router from "./routes/index";
+import router from "./routes/server";
 import cors from 'cors'
 import AppError from "./shared/error/AppError";
 import { AppDataSource } from "./database/data-source";
