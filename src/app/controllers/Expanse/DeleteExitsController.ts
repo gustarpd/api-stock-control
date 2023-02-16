@@ -7,9 +7,8 @@ export class ExitExpanseController {
     const { id } = request.body;
 
     const exit = new DeleteExitExitService();
-    const exitservice = exit.execute(id)
-  
+    const exitservice = exit.execute(id);
 
-    return response.json(exitservice)
+    return response.json(exitservice);
   }
 }

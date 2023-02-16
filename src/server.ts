@@ -5,7 +5,7 @@ import express, {
   NextFunction,
 } from "express";
 import dotenv from "dotenv";
-import router from "./routes/server";
+import router from "./routes/router";
 import cors from 'cors'
 import AppError from "./shared/error/AppError";
 import { AppDataSource } from "./database/data-source";
@@ -14,7 +14,7 @@ import "reflect-metadata";
 AppDataSource.initialize().then(() => {
   dotenv.config();
   const server = express();
-   
+
   server.use(cors({
     origin: "*"
   }))

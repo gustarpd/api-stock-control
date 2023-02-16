@@ -2,7 +2,7 @@ import { AppDataSource } from "../../../database/data-source";
 import { Sale } from "../../entities/Sales";
 
 export interface IProductList {
-  id: any;
+  id: string;
   name: string;
   quantity: number;
   price: number;

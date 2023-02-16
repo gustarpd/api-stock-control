@@ -2,7 +2,7 @@
 import { SaleRepository } from "../../repositories/SaleProductRepository";
 
 interface IDate {
-  start_date: string;
+  start_date: string ;
   end_date: string;
 }
 
