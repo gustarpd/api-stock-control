@@ -1,12 +1,14 @@
 import { Router } from "express";
 import { DeleteProductController } from "../app/controllers/Product/delete-product";
-import { ExitExpanseController } from "../app/controllers/Expanse/ExitProductsController";
+import { ExitExpanseController } from "../app/controllers/Expanse/Entrance/ExitProductsController";
 import { updateProductController } from "../app/controllers/Product/filter-product";
-import { GetAllExitExpanseController } from "../app/controllers/Expanse/GetAllExitExpanseController";
-import { GetAllSalesControllers } from "../app/controllers/Expanse/GetAllSalesController";
+import { GetAllExitExpanseController } from "../app/controllers/Expanse/Exits/GetAllExitExpanseController";
+import { GetAllSalesControllers } from "../app/controllers/Expanse/Entrance/GetAllSalesController";
 import { ProductRegistrationController } from "../app/controllers/Product/product-registration";
 import { SoldProductController } from "../app/controllers/Product/soldProductController";
-import { DeleteSaleController } from "../app/controllers/Expanse/DeleteSaleController";
+import { DeleteSaleController } from "../app/controllers/Expanse/Entrance/DeleteSaleController";
+import { DeleteExitController } from "../app/controllers/Expanse/Exits/DeleteExitsController";
+import { UpdateExitsController } from "../app/controllers/Expanse/Exits/UpdateExitsController";
 
 const router = Router();
 
@@ -32,9 +34,9 @@ router.post("/create-new-exit", new ExitExpanseController().handle);
 
 router.get("/get-exits-expanses", new GetAllExitExpanseController().handle);
 router.put(
-  "/update-exits-expanses/:id",
-  new GetAllExitExpanseController().handle
+  "/update/exit/expanses/:id",
+  new UpdateExitsController().handle
 );
-router.delete("/delete/products/:id", new DeleteProductController().handle);
+router.delete("/delete/exit/:id", new DeleteExitController().handle);
 
 export default router;

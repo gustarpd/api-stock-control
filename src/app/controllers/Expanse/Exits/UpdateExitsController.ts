@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
-import EditProductExitService from "../../services/Exits/EditExitService";
-import GetExitExpanseService from "../../services/Exits/GetExitExpansesService";
+import EditProductExitService from "../../../services/Exits/EditExitService";
 
-export class GetAllExitExpanseController {
+export class UpdateExitsController {
   async handle(request: Request, response: Response) {
     const { description, price, date } = request.body;
     const id = parseInt(request.params.id);

@@ -1,11 +1,10 @@
 import { Request, Response } from "express";
-import DeleteExitExitService from "../../services/Exits/deleteService";
-import ExitProductService from "../../services/Exits/ExitService";
+import DeleteExitExitService from "../../../services/Exits/deleteService";
 
-export class ExitExpanseController {
+export class DeleteExitController {
   async handle(request: Request, response: Response) {
-    const { id } = request.body;
-
+    const { id } = request.params;
+     
     const exit = new DeleteExitExitService();
     const exitservice = exit.execute(id);
 
