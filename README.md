@@ -7,7 +7,7 @@ Abra o terminal dentro da pasta do projeto e execute os comandos:
 
 Para rodar as migrations execute
 
-```npm run mogration:run```
+```npm run migration:run```
 
 ```npm run mogration:generate```
 
