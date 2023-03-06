@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
 import FilterProductService from "../../services/Products/FilterproductService";
-import updatesProductService from "../../services/Products/updateProduct";
+import updatesProductService from "../../services/Products/UpdateProduct";
 
 export class updateProductController {
   public async handle(request: Request, response: Response) {
-    const { name } = request.query;
+    const { name } = request.params;
     const productExecute = new FilterProductService();
     const product = await productExecute.execute(name);
-    console.log(name);
+    console.log(product);
     response.json(product);
   }
 

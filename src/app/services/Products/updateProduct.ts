@@ -6,7 +6,7 @@ import {
   ProductRepository,
 } from "../../repositories/ProductsRepository";
 
-class updatesProductService {
+class UpdatesProductService {
   public async updateProduct({
     id,
     name,
@@ -29,4 +29,4 @@ class updatesProductService {
   }
 }
 
-export default updatesProductService;
+export default UpdatesProductService;
