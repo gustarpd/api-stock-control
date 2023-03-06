@@ -9,7 +9,7 @@ Para rodar as migrations execute
 
 ```npm run migration:run```
 
-```npm run mogration:generate```
+```npm run migration:generate```
 
 Para iniciar o projeto execute
 
