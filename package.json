@@ -10,7 +10,7 @@
     "eslint:fix": "eslint --fix",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/database/data-source.ts migration:generate ./src/database/migrations/default",
     "seed": "ts-node ./node_modules/typeorm-extension/dist/cli/index.js seed -d ./src/database/data-source.ts",
-    "migration:run": "typeorm-ts-node-commonjs -d ./src/database/data-source.ts migration:run"
+    "migration:run": " node ./src/database/data-source.ts migration:run"
   },
   "keywords": [],
   "author": "",

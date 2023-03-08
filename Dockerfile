@@ -9,7 +9,8 @@ COPY package*.json ./
 
 # Install app dependencies
 RUN npm install
-
+RUN npm run migration:run
+RUN npm run migration:generate
 # Copy all other files to container
 COPY . .
 
