@@ -44,7 +44,7 @@ Exemplo de retorno em JSON:
 ```json
 
 {
-  "id": "28543c30-de38-4def-a4c4-699cc25faadc",
+       "id": "28543c30-de38-4def-a4c4-699cc25faadc",
 	"name": "Produto A",
 	"price": 10.5,
 	"quantity": 100,
@@ -88,7 +88,7 @@ Exemplo de retorno em JSON:
 ```json
 
 {
-  "id": "f7631727-4296-4fea-9b28-df8a543cd83e",
+       "id": "f7631727-4296-4fea-9b28-df8a543cd83e",
 	"name": "Produto B",
 	"price": 10.5,
 	"quantity": 100,
