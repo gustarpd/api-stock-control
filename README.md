@@ -3,33 +3,25 @@
 # Como executar
 Para executar o projeto certifique de ter o docker instalado em sua máquina
 
-Abra o terminal dentro da pasta do projeto e execute os comandos:
-
-Para rodar as migrations execute
-
-```npm run migration:run```
-
-```npm run migration:generate```
-
-Para iniciar o projeto execute
+Abra o terminal dentro da pasta do projeto e execute o comando:
 
 ```docker-compose up```
 
-# Documentação das rotas
+Em seguida o servidor irá rodar na porta 3000
 
-A seguir, estão listados todas as rotas disponíveis na API com seus respectivos endpoints e retornos em JSON.
-
-Rota GET /ping
-
-Endpoint utilizado para testar a conectividade com o servidor.
-
-Exemplo de retorno em JSON:
+# Testando a api
+Para verificar se o servidor iniciou correntamente abra o navegador e entre no endereço ```http://localhost:3000/ping```
+isto deve retornar:
 
 ```json
 {
   "message": "pong"
 }
 ```
+
+# Documentação das rotas
+
+A seguir, estão listados todas as rotas disponíveis na API com seus respectivos endpoints e retornos em JSON.
 
 Rota POST /products-registration
 
