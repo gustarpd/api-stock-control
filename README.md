@@ -10,8 +10,8 @@ Abra o terminal dentro da pasta do projeto e execute o comando:
 Em seguida o servidor irá rodar na porta 3000
 
 # Testando a api
-Para verificar se o servidor iniciou correntamente abra o navegador e entre no endereço ```http://localhost:3000/ping```
-isto deve retornar:
+Para verificar se o servidor iniciou corretamente abra o navegador e entre no endereço ```http://localhost:3000/ping```
+isso deve retornar:
 
 ```json
 {
