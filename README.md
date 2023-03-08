@@ -19,6 +19,8 @@ isso deve retornar:
 }
 ```
 
+Essa resposta indica que o servidor está em execução e capaz de responder a solicitações.
+
 # Documentação das rotas
 
 A seguir, estão listados todas as rotas disponíveis na API com seus respectivos endpoints e retornos em JSON.
